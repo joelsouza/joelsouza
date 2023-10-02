@@ -1,6 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 @import 'variables';
 @import './styles.scss';
 
@@ -18,9 +15,16 @@ body {
   font-family: 'Roboto', Verdana, Geneva, Sans-Serif;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
+  background: $eerie-black;
+  color: $antiflash-white;
 }
 
 a {
-    border-bottom: 1px solid;
-    display: inline-block;
+  border-bottom: 1px solid;
+  display: inline-block;
+}
+
+main {
+  max-width: 80%;
+  margin: 0 auto;
 }
