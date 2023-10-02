@@ -16,7 +16,7 @@ export default function Home() {
           I&apos;ve become the person I once dreamed of being as a teenager.
         </p>
         <p>
-          While I don&apos;t hold a CS degree, I&apos;ve been a passionate developer since 2007. <a href="https://www.linkedin.com/in/joel-ssouza/" target='_blank'>I know Ruby</a> and I can write full-stack apps in NodeJS and React however, I&apos;m obsessed with following the rapid evolution of web platforms, especially those built with the foundational HTML, CSS, and JavaScript that drive Web APIs.
+          While I don&apos;t hold a CS degree, I&apos;ve been a passionate developer since 2007. <a href="https://www.linkedin.com/in/joel-ssouza/" target='_blank'>I know Ruby</a> and I can write full-stack apps in NodeJS and React however, I&apos;m obsessed following the evolution of web platform and Web APIs.
         </p>
         <p>
           I run half marathons from time to time <a href="https://www.strava.com/athletes/56494818" target='_blank'>train weekly</a>, and aspire to someday complete a full marathon.
