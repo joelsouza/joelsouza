@@ -1,121 +1,46 @@
+.main {
+  max-width: 600px;
+}
+
 .hero {
-  background: $eerie-black;
-  color: $antiflash-white;
-  min-height: calc(100vh - 6rem);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  padding-top: 4rem;
 
-  header {
-    margin: 0 2rem;
-
-    @media screen and (min-width: 768px) {
-      margin: 0 4rem;
-    }
-
-    @media screen and (min-width: 1024px) {
-        margin: 0 6rem;
-    }
-
-    @media screen and (min-width: 1280px) {
-          max-width: 1024px;
-        margin: 0 auto;
-    }
+  @media screen and (min-width: 768px) {
+    padding-top: 6rem;
   }
 
   h1 {
+    font-size: 3rem;
     font-weight: 100;
-    font-size: 4rem;
-    line-height: 3rem;
     margin: 0 0 1rem;
   }
 
-  p {
-    font-size: 2.5rem;
+  .subtitle {
+    font-size: 1.75rem;
     font-weight: 300;
-    line-height: 3rem;
-    margin: 0;
-    letter-spacing: 0.1rem;
+    margin: 0 0 3rem;
 
-    a {
-        border-color: $antiflash-white;
+    @media screen and (min-width: 768px) {
+      font-size: 2rem;
     }
   }
 
-  span {
-    font-size: 2.5rem;
-    line-height: 2.5rem;
+  a {
+    border-color: $antiflash-white;
   }
+}
 
-  span + span {
-    font-size: 2rem;
-    line-height: 2.25rem;
-  }
+.intro {
+  color: #a9acaa;
 
-  span + span + span{
+  p:first-child {
     font-size: 1.5rem;
     line-height: 2rem;
   }
 
-}
-
-.intro {
-  background: $antiflash-white;
-  color: $eerie-black;
-  min-height: calc(100vh - 6rem);
-  padding: 10vh 0;
-
-  @media screen and (min-width: 768px) {
-    padding: 15vh 0;
-  }
-
-  @media screen and (min-width: 1024px) {
-      padding: 20vh 0;
-  }
-
-  @media screen and (min-width: 1280px) {
-      padding: 25vh 0;
-  }
-}
-
-.bio {
-  margin: 0 auto;
-
-  @media screen and (min-width: 768px) {
-    margin: 0 4rem;
-  }
-
-  @media screen and (min-width: 1024px) {
-      margin: 0 6rem;
-  }
-
-  @media screen and (min-width: 1280px) {
-      max-width: 1024px;
-      margin: 0 auto;
-  }
-
-  font-size: 1.5rem; /* 24px */
-  line-height: 2rem; /* 32px */
-  margin-bottom: 16rem;
-  text-wrap: balance;
-
   p {
-    margin-bottom: 2rem;
-  }
-}
-
-.photo {
-  background: $eerie-black;
-  padding: 0;
-
-  @media screen and (min-width: 1024px) {
-      padding: 32rem 0;
-  }
-
-  .container {
-    @media screen and (min-width: 1024px) {
-      display: flex;
-      justify-content: flex-end;
-    }
+    font-size: 1.25rem;
+    line-height: 2rem;
+    font-weight: 300;
   }
 }
