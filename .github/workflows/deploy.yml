@@ -13,16 +13,6 @@ jobs:
         with:
           fetch-depth: 0
           ref: main
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18.x
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build
-        run: npm run build
 
       - name: Install SSH Key
         uses: shimataro/ssh-key-action@v2.5.1
@@ -33,7 +23,15 @@ jobs:
       - name: Adding Known Hosts
         run: ssh-keyscan -H ${{ secrets.HOST }} >> ~/.ssh/known_hosts
 
-      - name: Deploy with rsync
-        run: rsync -avz --delete . ${{ secrets.USERNAME }}@${{ secrets.HOST }}:${{ secrets.TARGET_DIRECTORY }}
-
-
+      - name: Deploy to Digital Ocean with SSH
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            cd ${{ secrets.TARGET_DIRECTORY }};
+            git fetch --all --prune && git pull;
+            git checkout $(git describe --tags $(git rev-list --tags --max-count=1));
+            docker build . -t joelsouza:latest;
+            docker run --rm -it -p 3000:3000 joelsouza:latest;
