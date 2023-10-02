@@ -34,4 +34,4 @@ jobs:
             git fetch --all --prune && git pull;
             git checkout $(git describe --tags $(git rev-list --tags --max-count=1));
             docker build . -t joelsouza:latest;
-            docker run --rm -it -p 3000:3000 joelsouza:latest;
+            docker run -d --rm -p 3000:3000 joelsouza:latest;
