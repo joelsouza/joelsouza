@@ -8,18 +8,12 @@ export default function Home() {
       <section className="hero">
         <header>
           <h1>Hi, I&apos;m Joel</h1>
-          <p className="subtitle">a passionate software engineer from Brazil.</p>
+          <p className="subtitle">a software engineer from Brazil.</p>
         </header>
       </section>
       <section className='intro'>
         <p>
-          I&apos;ve become the person I once dreamed of being as a teenager.
-        </p>
-        <p>
-          While I don&apos;t hold a CS degree, I&apos;ve been a passionate developer since 2007. <a href="https://www.linkedin.com/in/joel-ssouza/" target='_blank'>I know Ruby</a> and I can write full-stack apps in NodeJS and React however, I&apos;m obsessed following the evolution of web platform and Web APIs.
-        </p>
-        <p>
-          I run half marathons from time to time <a href="https://www.strava.com/athletes/56494818" target='_blank'>train weekly</a>, and aspire to someday complete a full marathon.
+          I have been a passionate developer since 2007, working with various technologies and programming languages in diverse fields such as media, education, and drone racing.
         </p>
         <p>
           I am currently learning Elixir while mastering the art of balancing family, work, and focus in the midst of the daily hustle.
