@@ -34,5 +34,5 @@ jobs:
             git fetch --all --prune && git pull;
             git checkout $(git describe --tags $(git rev-list --tags --max-count=1));
             docker build . -t joelsouza:latest;
-            docker kill $(docker ps -q --filter "status=running" --filter "ancestor=joelsouza") 2> /dev/null;
+            docker kill $(docker ps -q)
             docker run -d --rm -p 3000:3000 --name joelsouza joelsouza:latest;
