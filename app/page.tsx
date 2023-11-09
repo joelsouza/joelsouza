@@ -13,10 +13,10 @@ export default function Home() {
       </section>
       <section className='intro'>
         <p>
-          I have been a passionate developer <a href="https://www.linkedin.com/in/joel-ssouza/" target="_blank">since 2007</a>, working with various technologies and programming languages in diverse fields such as media, education, and drone racing.
+          I have been a passionate and interdisciplinary developer <a href="https://www.linkedin.com/in/joel-ssouza/" target="_blank">since 2007</a>, working with diverse fields such as media, education, and drone racing.
         </p>
         <p>
-          I am currently learning Elixir while mastering the art of balancing family, work, and focus in the midst of the daily hustle.
+          I am currently learning the art of balancing family, work, and focus in the midst of the daily hustle.
         </p>
         <nav>
           <a href="mailto:hire@joelsouza.com">Hire me</a>
