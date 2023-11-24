@@ -5,7 +5,7 @@ import { Roboto, Montserrat } from 'next/font/google';
 
 const roboto = Roboto({
   subsets: ['latin'],
-  weight: ['100', '400', '700'],
+  weight: ['300', '400', '700'],
 });
 
 const montserrat = Montserrat({
@@ -16,7 +16,7 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: 'Joel Souza',
-  description: 'Digital garden of Joel Souza',
+  description: "Hi, I'm Joel, a passionate and interdisciplinary software engineer from Brazil",
 };
 
 export default function RootLayout({
