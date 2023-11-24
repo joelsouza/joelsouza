@@ -16,7 +16,7 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: 'Joel Souza',
-  description: 'Digital garden of Joel Souza',
+  description: "Hi, I'm Joel, a passionate and interdisciplinary software engineer from Brazil",
 };
 
 export default function RootLayout({
