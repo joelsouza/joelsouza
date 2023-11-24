@@ -33,15 +33,20 @@
 .intro {
   color: #a9acaa;
 
-  p:first-child {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-
   p {
     font-size: 1.25rem;
     line-height: 2rem;
     font-weight: 300;
+
+    &:first-child {
+      font-size: 1.5rem;
+      line-height: 2rem;
+    }
+  }
+
+  hr {
+    border: none;
+    margin-bottom: 5rem;
   }
 
   a {
@@ -56,4 +61,14 @@
 
 nav {
   font-size: 1rem;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin-bottom: 1rem;
+    }
+  }
 }

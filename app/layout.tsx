@@ -5,7 +5,7 @@ import { Roboto, Montserrat } from 'next/font/google';
 
 const roboto = Roboto({
   subsets: ['latin'],
-  weight: ['100', '400', '700'],
+  weight: ['300', '400', '700'],
 });
 
 const montserrat = Montserrat({
