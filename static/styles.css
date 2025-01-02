@@ -17,7 +17,7 @@ html {
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', Verdana, Geneva, Sans-Serif;
+    font-family: 'Lekton', Verdana, Geneva, Sans-Serif;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
@@ -58,13 +58,13 @@ main {
 
 .hero h1 {
     font-size: 3rem;
-    font-weight: 100;
-    margin: 0 0 1rem;
+    font-weight: 400;
+    margin: 0;
 }
 
 .hero .subtitle {
     font-size: 1.75rem;
-    font-weight: 300;
+    font-weight: 400;
     margin: 0 0 3rem;
 }
 
@@ -85,7 +85,6 @@ main {
 .intro p {
     font-size: 1.25rem;
     line-height: 2rem;
-    font-weight: 300;
 }
 
 .intro p:first-child {
