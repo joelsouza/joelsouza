@@ -1,13 +1,37 @@
-node_modules
-npm-debug.log
-Dockerfile*
-docker-compose*
-.dockerignore
-.git
-.gitignore
-README.md
-LICENSE
-.vscode
-.next
+# Binaries and build artifacts
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Go specific
+vendor/
+.env
+
+# IDE specific
+.idea/
+.vscode/
 *.swp
-/scripts
+*.swo
+.DS_Store
+
+# Docker specific
+Dockerfile
+.dockerignore
+
+# Git
+.git/
+.gitignore
+
+# Temporary files
+tmp/
+temp/
+
+# Log files
+*.log
+
+# Test files
+*_test.go

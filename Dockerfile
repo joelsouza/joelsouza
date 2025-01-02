@@ -1,19 +1,30 @@
-FROM node:lts-alpine as build_image 
-WORKDIR /usr/src/app
-COPY package.json yarn.lock ./
-ENV NODE_ENV=production
-RUN yarn install --frozen-lockfile
+# Use the official Go image as the base image
+FROM golang:1.23.3-alpine AS builder
+
+# Set the working directory
+WORKDIR /app
+
+# Copy go.mod and go.sum files
+COPY go.mod ./
+
+# Copy the source code
 COPY . .
-RUN yarn build
-EXPOSE 3000
-CMD ["yarn", "start"]
 
+# Build the application
+RUN go build -o main .
 
-# FROM node:lts-alpine
-# WORKDIR /usr/src/app
-# # copy from build image
-# COPY --from=build_image /usr/src/app/ ./
-# COPY --from=build_image /usr/src/app/node_modules ./node_modules
+# Use a minimal alpine image for the final stage
+FROM alpine:latest
 
-# EXPOSE 3000
-# CMD ["yarn", "start"]
+WORKDIR /app
+
+# Copy the binary from builder
+COPY --from=builder /app/main .
+COPY index.html .
+COPY static/ static/
+
+# Expose port 8080
+EXPOSE 8080
+
+# Run the binary
+CMD ["./main"]
