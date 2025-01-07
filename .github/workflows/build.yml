@@ -1,15 +1,16 @@
-name: Build Static Image
+name: Deploy to Coolify
 on:
   push:
-    branches: ["develop"]
+    branches:
+      - develop
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    name: Deploy to Coolify
+    runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v2
-      - uses: themarkwill/coolify-actions@v0.0.3 #deploy
+      - uses: manicmade/coolify-actions@v0.0.1
         with:
-          coolify-url: ${{ secrets.COOLIFY_URL }} # Required
-          coolify-app-id: ${{ secrets.COOLIFY_APP_ID }} #Required
-          coolify-token: ${{ secrets.COOLIFY_TOKEN }} #Required
+          coolify-url: ${{ secrets.COOLIFY_URL }}
+          coolify-app-id: ${{ secrets.COOLIFY_APP_ID }}
+          coolify-token: ${{ secrets.COOLIFY_TOKEN }}
