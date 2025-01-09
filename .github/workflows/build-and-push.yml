@@ -33,7 +33,8 @@ jobs:
 
       - name: Trigger Coolify Deployment
         run: |
-          curl -X GET "https://coolify.uispace.co/api/v1/deploy?uuid=pg4g48wwwck8ck8koc0gs84o&force=false" \
-            -H "Authorization: Bearer ${{ secrets.COOLIFY_TOKEN }}"
+          curl --request GET \
+            --url 'https://coolify.uispace.co/api/v1/deploy?uuid=pg4g48wwwck8ck8koc0gs84o&force=false' \
+            --header 'authorization: Bearer ${{ secrets.COOLIFY_TOKEN }}'
         env:
           COOLIFY_TOKEN: ${{ secrets.COOLIFY_TOKEN }}
