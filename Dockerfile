@@ -20,7 +20,7 @@ WORKDIR /app
 
 # Copy the binary from builder
 COPY --from=builder /app/main .
-COPY index.html .
+COPY *.html .
 COPY static/ static/
 
 EXPOSE 8090
