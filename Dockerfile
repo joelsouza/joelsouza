@@ -23,8 +23,7 @@ COPY --from=builder /app/main .
 COPY index.html .
 COPY static/ static/
 
-# Expose port 8080
-EXPOSE 8080
+EXPOSE 8090
 
 # Run the binary
 CMD ["./main"]
