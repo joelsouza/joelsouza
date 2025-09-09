@@ -16,6 +16,10 @@ func main() {
 			http.ServeFile(w, r, "./index.html")
 			return
 		}
+		if r.URL.Path == "/today" {
+			http.ServeFile(w, r, "./today.html")
+			return
+		}
 		http.NotFound(w, r)
 	})
 
