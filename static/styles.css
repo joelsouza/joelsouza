@@ -10,23 +10,24 @@ html {
     box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
     box-sizing: inherit;
 }
 
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Lekton', Verdana, Geneva, Sans-Serif;
+    font-family: "Lekton", Verdana, Geneva, Sans-Serif;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
     font-feature-settings:
-    "cv11", "salt", "ss01", "ss03",
-    "cv01", "cv02", "cv03", "cv04",
-    "cv05", "cv06", "cv09", "cv10";
+        "cv11", "salt", "ss01", "ss03", "cv01", "cv02", "cv03", "cv04", "cv05",
+        "cv06", "cv09", "cv10";
     background: var(--eerie-black);
     color: var(--antiflash-white);
 }
@@ -42,8 +43,10 @@ main {
     margin: 0 auto;
 }
 
-.main {
+.today {
     max-width: 600px;
+    margin: 0 auto;
+    padding: 3rem 0;
 }
 
 .hero {
@@ -97,11 +100,11 @@ main {
     margin-bottom: 5rem;
 }
 
-.intro a {
+a {
     color: #a9acaa;
 }
 
-.intro a:hover {
+a:hover {
     color: var(--antiflash-white);
     text-decoration-color: var(--antiflash-white);
 }
@@ -118,4 +121,4 @@ nav ul {
 
 nav ul li {
     margin-bottom: 1rem;
-} 
+}
