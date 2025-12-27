@@ -20,6 +20,10 @@ func main() {
 			http.ServeFile(w, r, "./today.html")
 			return
 		}
+		if r.URL.Path == "/zoho-domain-verification.html" {
+			http.ServeFile(w, r, "./zoho-domain-verification.html")
+			return
+		}
 		http.NotFound(w, r)
 	})
 
