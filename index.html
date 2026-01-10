@@ -1,8 +1,10 @@
 <!doctype html>
-<html>
+<html lang="en">
     <head>
-        <title>Joel Souza</title>
+        <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="color-scheme" content="dark" />
+        <title>Joel Souza</title>
         <meta
             name="description"
             content="Hi, I'm Joel a software engineer from Brazil."
@@ -30,32 +32,36 @@
         </script>
     </head>
     <body>
-        <main>
-            <article class="main">
-                <section class="hero">
-                    <header>
-                        <h1>Hi, I'm Joel</h1>
-                        <p class="subtitle">a software engineer from Brazil.</p>
-                    </header>
-                </section>
-                <section class="intro">
-                    <p>
+        <main class="container container-wide">
+            <article>
+                <header class="section section-hero">
+                    <h1 class="title title-xl">Hi, I'm Joel</h1>
+                    <p class="title title-lg mb-xl">
+                        a software engineer from Brazil.
+                    </p>
+                </header>
+                <section class="text-muted">
+                    <p class="text text-lg mb-md">
                         I have been a passionate and interdisciplinary developer
                         <a
+                            class="link link-light"
                             href="https://www.linkedin.com/in/joel-ssouza/"
                             target="_blank"
+                            rel="noopener noreferrer"
                             >since 2007</a
                         >, working with diverse fields such as media, education,
                         and drone racing.
                     </p>
-                    <p>
+                    <p class="text text-md mb-3xl">
                         I am currently learning the art of balancing family,
                         work, and focus in the midst of the daily hustle.
                     </p>
-                    <nav>
-                        <ul>
+                    <nav class="nav" aria-label="Contact">
+                        <ul class="list-inline">
                             <li>
-                                <a href="mailto:hire@joelsouza.com">Hire me</a>
+                                <a class="link" href="mailto:hire@joelsouza.com"
+                                    >Hire me</a
+                                >
                             </li>
                         </ul>
                     </nav>
