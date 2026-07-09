@@ -10,10 +10,15 @@ func main() {
 	fs := http.FileServer(http.Dir("static"))
 	http.Handle("/static/", http.StripPrefix("/static/", fs))
 
-	// Serve index.html
+	// Serve static pages
+	pages := map[string]string{
+		"/":     "./index.html",
+		"/uses": "./uses.html",
+	}
+
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		if r.URL.Path == "/" {
-			http.ServeFile(w, r, "./index.html")
+		if file, ok := pages[r.URL.Path]; ok {
+			http.ServeFile(w, r, file)
 			return
 		}
 		http.NotFound(w, r)

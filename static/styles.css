@@ -5,6 +5,7 @@
         --color-bg: hsl(160 10% 12%);
         --color-text: hsl(100 8% 94%);
         --color-text-muted: hsl(120 2% 66%);
+        --color-border: hsl(120 4% 26%);
 
         --font-family: "Lekton", Verdana, Geneva, sans-serif;
         --text-base: 1rem;
@@ -88,6 +89,7 @@
     .container-narrow {
         max-inline-size: var(--width-narrow);
         padding-block: var(--space-xl);
+        padding-inline: var(--space-md);
     }
 
     .section {
@@ -148,8 +150,48 @@
         gap: var(--space-md);
     }
 
+    .list-stack {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .list-stack > li {
+        padding-block: var(--space-sm);
+        border-block-end: 1px solid var(--color-border);
+    }
+
+    .list-stack > li:first-child {
+        padding-block-start: 0;
+    }
+
+    .list-stack > li:last-child {
+        border-block-end: none;
+    }
+
     .nav {
         font-size: var(--text-base);
+    }
+
+    .back-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4em;
+    }
+
+    .back-link::before {
+        content: "←";
+        transition: transform var(--transition);
+    }
+
+    .back-link:hover::before,
+    .back-link:focus-visible::before {
+        transform: translateX(-3px);
+    }
+
+    .label {
+        font-size: 0.75rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
     }
 }
 
@@ -170,6 +212,10 @@
     .text-muted {
         color: var(--color-text-muted);
     }
+
+    .label {
+        color: var(--color-text-muted);
+    }
 }
 
 @layer utilities {
@@ -181,5 +227,35 @@
     }
     .mb-3xl {
         margin-block-end: var(--space-3xl);
+    }
+
+    .stagger-in > * {
+        animation: fade-up 500ms ease both;
+    }
+    .stagger-in > *:nth-child(1) {
+        animation-delay: 0ms;
+    }
+    .stagger-in > *:nth-child(2) {
+        animation-delay: 90ms;
+    }
+    .stagger-in > *:nth-child(3) {
+        animation-delay: 180ms;
+    }
+
+    @keyframes fade-up {
+        from {
+            opacity: 0;
+            transform: translateY(8px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .stagger-in > * {
+            animation: none;
+        }
     }
 }
